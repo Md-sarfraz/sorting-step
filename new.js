@@ -21,9 +21,6 @@ const updateStep = (stepIndex, arr) => {
     }
     var divpass= document.createElement('div');
     divpass.innerHTML=arrayBox;
-    divpass.style.display='flex';
-    divpass.style.margin='10px';
-    divpass.classList.add("array-box-container")
     outerBoxId.appendChild(divpass);
 }
 
@@ -35,9 +32,8 @@ if (click) {
         }
 
         const SortArray = () => {
-            for (let i = 0; i < arr.length ; i++) {
-                for (let j = 0; j < arr.length - i ; j++) {
-                   
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = 0; j < arr.length - i - 1; j++) {
                     if (arr[j] > arr[j + 1]) {
                         const temp = arr[j];
                         arr[j] = arr[j + 1];
